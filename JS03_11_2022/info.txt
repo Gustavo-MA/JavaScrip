@@ -1,0 +1,4 @@
+Manejo de archivos, clase 03112022
+G. Medina-Àngel
+Lectura de archivo.
+
