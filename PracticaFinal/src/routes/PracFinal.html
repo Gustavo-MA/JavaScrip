@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Index</title>
+ 
+   <style>
+    body {
+        background: rgb(184, 230, 230);
+    }
+    #main {
+        margin-top: 0px;
+        text-align: left;
+    }
+    #canvas {
+        background-color: rgb(171, 113, 219);
+        height: 180px;
+        width: 300px;
+        
+    } 
+</style>
+</head>
+  <body>
+    <!--
+      <script type="text/javascript">
+        document.body.style.backgroundColor = 'Cyan';
+        
+    </script>
+  -->
+    <h1>Practica Final</h1>
+    <form method="post" action="respuesta">
+        <label>Nombre:<input type="text" name="Nombre"></label><br><br>
+        <label>Apellidos:<input type="text" name="Apellidos"></label><br><br>
+        <label>Direccion:<input type="text" name="Direccion"></label><br><br>
+        <label>Telefono:<input type="text" name="Telefono"></label><br><br>
+        <input type="submit" value="Enviar"><br><br>
+        
+    </form>
+    <div id="main">
+      <canvas id="canvas" width="300" height="180"></canvas>
+      
+  </div>
+  
+    <script>
+     
+      var app = ( function () {
+    var canvas = document.getElementById( 'canvas' ),
+        context = canvas.getContext( '2d' ),
+ 
+        // API
+        public = {};
+ 
+        public.loadPicture = function () {
+    var imageObj = new Image();
+    imageObj.src = './Logo.jpg';
+ 
+    imageObj.onload = function () {
+        context.drawImage( imageObj, 100, 100 );
+        app.loadPicture();
+    }
+    imagen = document.createElement("img");
+
+
+
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+
+var img = new Image();
+img.src = "./Logo.jpg";
+
+ctx.drawImage(img, 100, 100);
+
+img.onload = function(){
+  ctx.drawImage(img, 100, 100);
+}
+
+
+    
+};
+ 
+        return public;
+} () );
+
+    </script>
+  </body>
+<!--
+<img src="" name="Logo.jpg" width="300" height="180">
+-->
+</html>
